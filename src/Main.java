@@ -18,7 +18,7 @@ public class Main {
         } catch (FullQueueException fullExp) {
             //
             System.out.println("EXCEPCIÓ!!");
-            fullExp.printStackTrace();
+
         }
 
         System.out.println("Inicialitzem la cua, afegim 3 elements i els desencolem!!!");
@@ -42,11 +42,11 @@ public class Main {
         }
         catch (FullQueueException fullExc) {
             System.out.println("EXCEPCIÓ FULL!!!");
-            fullExc.printStackTrace();
+;
         }
         catch (EmptyQueueException emptyExc) {
             System.out.println("EXCEPCIÓ EMPTY!!!!!");
-            emptyExc.printStackTrace();
+
         }
 
 
@@ -60,19 +60,21 @@ public class Main {
             q2.push("MOLA!!!");
             System.out.println(q.size());
 
+            // Viene por defecto en el codigo de Toni en la condicion del while q2.size > 0, pero lo he
+            // cambiado para probar si salta la expception
             String s;
-            while (q2.size() > 0) {
+            while (q2.size() >= 0) {
                 s = q2.pop();
                 System.out.println(s);
             }
         }
         catch (FullQueueException fullExc) {
             System.out.println("EXCEPCIÓ FULL!!!");
-            fullExc.printStackTrace();
+
         }
         catch (EmptyQueueException emptyExc) {
             System.out.println("EXCEPCIÓ EMPTY!!!!!");
-            emptyExc.printStackTrace();
+
         }
 
     }
